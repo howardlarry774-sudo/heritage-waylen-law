@@ -1,0 +1,618 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Waylen Law Firm | Probate & Estate Legal Counsel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0F1C2E;
+            --dark-navy: #0A121E;
+            --gold: #C5A059;
+            --light-gold: #E2C792;
+            --cream: #FAF8F5;
+            --white: #FFFFFF;
+            --text-dark: #2C3539;
+            --text-muted: #666666;
+            --border: #E0DACE;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+
+        /* Header & Navigation */
+        .top-bar {
+            background-color: var(--dark-navy);
+            color: var(--cream);
+            padding: 10px 5%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .top-bar a {
+            color: var(--gold);
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        nav {
+            background-color: var(--navy);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 45px;
+            filter: invert(72%) sepia(43%) saturate(456%) hue-rotate(6deg) brightness(92%) contrast(88%);
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            display: block;
+            color: var(--gold);
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--dark-navy) !important;
+            padding: 12px 24px;
+            font-weight: 600;
+            border: 1px solid var(--gold);
+            transition: all 0.3s ease !important;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--gold) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 28, 46, 0.88), rgba(15, 28, 46, 0.88)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 140px 5% 100px;
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: var(--cream);
+            font-style: italic;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            padding: 12px 24px;
+            border: 1px solid var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--navy);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background-color: var(--gold);
+        }
+
+        .section-title p {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Expertise Section */
+        .expertise-container {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .expertise-number {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.4;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .expertise-column p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Attorneys Section */
+        .attorneys {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+
+        .attorneys .section-title h2 {
+            color: var(--white);
+        }
+
+        .attorney-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .attorney-card {
+            background-color: var(--dark-navy);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .attorney-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .attorney-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            background-color: rgba(197, 160, 89, 0.05);
+        }
+
+        .attorney-card h3 {
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .attorney-card p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .attorney-card .btn-hire {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 0.75rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .attorney-card .btn-hire:hover {
+            background-color: var(--gold);
+            color: var(--dark-navy);
+        }
+
+        /* Consultation & Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            background-color: var(--white);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+        }
+
+        .info-item h4 {
+            color: var(--navy);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item p {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .booking-form {
+            background-color: var(--white);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            background-color: var(--cream);
+            font-family: 'Libre Baskerville', serif;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-navy);
+            color: var(--text-muted);
+            text-align: center;
+            padding: 40px 5% 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            max-width: 800px;
+            margin: 20px auto 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .expertise-grid, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div>
+            <span>Houston, Texas</span> | 
+            <span>+1 760 299 0209</span>
+        </div>
+        <div>
+            <a href="mailto:Davidjamelwilson001@gmail.com">Davidjamelwilson001@gmail.com</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav>
+        <div class="logo-container">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C5A059'><path d='M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 13.51L4.25 12 12 8.49 19.75 12 12 15.51zM12 17c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>" alt="Scales of Justice" class="logo-img">
+            <div>
+                <span class="brand-name">Heritage Waylen</span>
+                <span class="brand-subtitle">LAW FIRM</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#expertise">Practice Areas</a></li>
+            <li><a href="#attorneys">Attorneys</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#consultation" class="btn-gold">Book Consultation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Preserving Your Legacy With Authority & Integrity</h1>
+        <p>Specialized Probate & Estate Legal Counsel Tailored to Protect What Matters Most.</p>
+        <div class="hero-buttons">
+            <a href="#consultation" class="btn-gold">Schedule Consultation</a>
+            <a href="#attorneys" class="btn-outline">Our Legal Team</a>
+        </div>
+    </section>
+
+    <!-- Practice Areas / Probate Expertise -->
+    <section id="expertise">
+        <div class="section-title">
+            <h2>Area of Specialized Focus</h2>
+            <p>Authoritative Guidance in Estate & Probate Matters</p>
+        </div>
+
+        <div class="expertise-container">
+            <div class="expertise-number">01</div>
+            <h3 class="brand-font" style="font-size: 1.8rem; color: var(--navy); margin-bottom: 20px;">Probate Expertise</h3>
+            <div class="expertise-grid">
+                <div class="expertise-column">
+                    <p>We provide authoritative guidance on all probate and estate legal matters, ensuring a seamless transition for your loved ones. Our team navigates the complexities of estate administration with precision and compassion, focusing on clarity and the preservation of your family's legacy.</p>
+                </div>
+                <div class="expertise-column">
+                    <p>Our specialized focus ensures that every estate matter is handled with the highest standards of professional integrity. We guide you through the intricate legal processes, providing the authoritative support needed to resolve complex probate challenges with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attorneys Section -->
+    <section id="attorneys" class="attorneys">
+        <div class="section-title">
+            <h2>Our Legal Counsel</h2>
+            <p>Experienced Attorneys At Your Service</p>
+        </div>
+
+        <div class="attorney-grid">
+            <div class="attorney-card">
+                <div class="attorney-icon">DW</div>
+                <h3>David Jamel Wilson</h3>
+                <p>Managing Partner</p>
+                <a href="#consultation" class="btn-hire">Retain Attorney</a>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-icon">HL</div>
+                <h3>Howard Steven Larry</h3>
+                <p>Senior Associate</p>
+                <a href="#consultation" class="btn-hire">Retain Attorney</a>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-icon">SA</div>
+                <h3>Santos Andreas</h3>
+                <p>Estate Counsel</p>
+                <a href="#consultation" class="btn-hire">Retain Attorney</a>
+            </div>
+            <div class="attorney-card">
+                <div class="attorney-icon">SW</div>
+                <h3>Selena Nichole Williams</h3>
+                <p>Probate Specialist</p>
+                <a href="#consultation" class="btn-hire">Retain Attorney</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation & Contact Section -->
+    <section id="consultation">
+        <div class="section-title">
+            <h2>Contact & Consultation</h2>
+            <p>Initiate Legal Representation</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info" id="contact">
+                <h3 class="brand-font" style="color: var(--navy); margin-bottom: 25px;">Firm Chambers</h3>
+                
+                <div class="info-item">
+                    <h4>Location</h4>
+                    <p>1000 Louisiana Street, Suite 4000<br>Houston, Texas 77002<br>United States</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Direct Telephone</h4>
+                    <p>+1 760 299 0209</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Electronic Mail</h4>
+                    <p>Davidjamelwilson001@gmail.com</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Hours of Operation</h4>
+                    <p>Monday – Friday: 8:00 AM – 6:00 PM CST<br>Saturday & Sunday: By Appointment</p>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="booking-form">
+                <h3 class="brand-font" style="color: var(--navy); margin-bottom: 25px;">Schedule a Consultation</h3>
+                <form action="mailto:Davidjamelwilson001@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="fullname">Full Legal Name</label>
+                        <input type="text" id="fullname" name="Full Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attorney">Select Preferred Attorney</label>
+                        <select id="attorney" name="Preferred Attorney">
+                            <option value="General Consultation">First Available Attorney</option>
+                            <option value="David Jamel Wilson">David Jamel Wilson</option>
+                            <option value="Howard Steven Larry">Howard Steven Larry</option>
+                            <option value="Santos Andreas">Santos Andreas</option>
+                            <option value="Selena Nichole Williams">Selena Nichole Williams</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Brief Description of Estate Matter</label>
+                        <textarea id="details" name="Matter Details" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gold" style="width: 100%;">Request Legal Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Heritage Waylen Law Firm. All Rights Reserved.</p>
+        <div class="footer-disclaimer">
+            Disclaimer: The information provided on this website is for informational purposes only and does not constitute formal legal advice. Transmitting or receiving information through this website does not create an attorney-client relationship.
+        </div>
+    </footer>
+
+</body>
+</html>
+
+```
